@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Movie Night</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Plan Your Movie Night</h2>
+        <form id="movieForm" method="POST" action="submit.php">
+            <table>
+                <!-- Name Field -->
+                <tr>
+                    <td><label for="name">Your Name:</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Enter your name" required></td>
+                </tr>
+
+                <!-- Email Field -->
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter your email" required></td>
+                </tr>
+
+                <!-- Date Field -->
+                <tr>
+                    <td><label for="date">Date:</label></td>
+                    <td><input type="date" id="date" name="date" required></td>
+                </tr>
+
+                <!-- Language Selection -->
+                <tr>
+                    <td><label for="language">Choose Language:</label></td>
+                    <td>
+                        <select id="language" name="language" required>
+                            <option value="" disabled selected>Select a Language</option>
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Kannada">Kannada</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Movie Dropdown -->
+                <tr>
+                    <td><label for="movie">Choose Movie:</label></td>
+                    <td>
+                        <select id="movie" name="movie" required>
+                            <option value="" disabled selected>Select a Movie</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Snacks Field -->
+                <tr>
+                    <td><label for="snacks">Snacks (comma-separated):</label></td>
+                    <td><input type="text" id="snacks" name="snacks" placeholder="Popcorn, Nachos, Coke" required></td>
+                </tr>
+
+                <!-- Submit Button -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Plan Movie Night</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- JavaScript Integration -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
