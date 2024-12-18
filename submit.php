@@ -19,6 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<tr>
             <td style='padding: 10px; text-align: left; background-color: #f4f4f4;'>Email</td>
             <td style='padding: 10px;'>$email</td>
+            if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['date']) || empty($_POST['movie']) || empty($_POST['snacks'])) {
+    echo "All fields are required.";
+    exit;
+}
+
           </tr>";
     echo "<tr>
             <td style='padding: 10px; text-align: left; background-color: #f4f4f4;'>Date</td>
